@@ -309,7 +309,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -334,11 +334,10 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.058, z: -10}
-  m_LocalScale: {x: 0.14285713, y: 0.14285713, z: 1}
+  m_LocalPosition: {x: 0, y: 0.031, z: -10}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1315572111}
+  m_Children: []
   m_Father: {fileID: 1081952334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
@@ -611,6 +610,7 @@ GameObject:
   - component: {fileID: 1081952334}
   - component: {fileID: 1081952333}
   - component: {fileID: 1081952335}
+  - component: {fileID: 1081952336}
   m_Layer: 0
   m_Name: Dive Bell
   m_TagString: Untagged
@@ -665,7 +665,7 @@ SpriteRenderer:
   m_SortingLayerID: 1972655571
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 4edfceafc9322f34cab738358a283781, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b79464c4384815478121b15ca92a714, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -744,6 +744,28 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!95 &1081952336
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081952332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23b1b8aaf2d6f8c43997278f6b82c0fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1233743581
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315572111}
   - component: {fileID: 1315572112}
+  - component: {fileID: 1315572113}
   m_Layer: 0
   m_Name: Abyss
   m_TagString: Untagged
@@ -854,11 +877,11 @@ Transform:
   m_GameObject: {fileID: 1315572110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: 10}
-  m_LocalScale: {x: 15, y: 10, z: 1}
+  m_LocalPosition: {x: -0.0070559997, y: 0.20330799, z: 0}
+  m_LocalScale: {x: 10.596536, y: 6.054708, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 519420032}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1315572112
 SpriteRenderer:
@@ -907,7 +930,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5931932364317517272, guid: 432378d0cbc566d42bad6538fa8c6ae4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fd39484bbdca8245912f5bf81a8cabf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -918,6 +941,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1315572113
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315572110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3145597257663f4494e551215821e68, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1734119202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,4 +1236,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 1734119208}
+  - {fileID: 1315572111}
   - {fileID: 1081952334}

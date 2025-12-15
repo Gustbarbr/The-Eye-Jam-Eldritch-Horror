@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 432378d0cbc566d42bad6538fa8c6ae4
+guid: 762d55873aeb49c4eaabe22bedf3e9c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5931932364317517272
-    second: Abyss_0
+      213: -4513029034240404231
+    second: Dive Bell 0001_0
+  - first:
+      213: -8402972951069112214
+    second: Dive Bell 0001_1
+  - first:
+      213: 4386765557390491144
+    second: Dive Bell 0001_2
+  - first:
+      213: -158450443107275838
+    second: Dive Bell 0001_3
+  - first:
+      213: -1342759938120569700
+    second: Dive Bell 0001_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Abyss_0
+      name: Dive Bell 0001_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 33
+        y: 118
+        width: 958
+        height: 906
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82a163181fa8dada0800000000000000
-      internalID: -5931932364317517272
+      spriteID: 9f4931121008e51c0800000000000000
+      internalID: -4513029034240404231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dive Bell 0001_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 106
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a684f423f94a26b80800000000000000
+      internalID: -8402972951069112214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dive Bell 0001_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 55
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ebd29480ce0ec30800000000000000
+      internalID: 4386765557390491144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dive Bell 0001_3
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 82
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb661859221dcdf0800000000000000
+      internalID: -158450443107275838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dive Bell 0001_4
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 49
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ca2b553fe8d5de0800000000000000
+      internalID: -1342759938120569700
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Abyss_0: -5931932364317517272
+      Dive Bell 0001_0: -4513029034240404231
+      Dive Bell 0001_1: -8402972951069112214
+      Dive Bell 0001_2: 4386765557390491144
+      Dive Bell 0001_3: -158450443107275838
+      Dive Bell 0001_4: -1342759938120569700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
