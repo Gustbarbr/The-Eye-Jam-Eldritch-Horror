@@ -5,25 +5,38 @@ using static UnityEngine.GraphicsBuffer;
 
 public class AbylingControl : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [Header("Position")]
+    [SerializeField] private float moveSpeed;
 
     [Header("Rotation")]
-    [SerializeField] private Transform diveBell;
+    [SerializeField] private GameObject diveBell;
     [SerializeField] private float rotationSpeed;
     private float rotationOffset;
 
     [Header("Spawn")]
     [SerializeField] private GameObject spawnPointA;
     [SerializeField] private GameObject spawnPointB;
+    [SerializeField] private GameObject spawnPointC;
+    [SerializeField] private GameObject spawnPointD;
     [SerializeField] private List<GameObject> spawnList = new List<GameObject>();
     private GameObject chosenPoint;
 
     private void Start()
     {
-        if(!spawnList.Contains(spawnPointA))
+        diveBell = GameObject.Find("Dive Bell");
+        spawnPointA = GameObject.Find("Abyling Spawn Point A");
+        spawnPointB = GameObject.Find("Abyling Spawn Point B");
+        spawnPointC = GameObject.Find("Abyling Spawn Point C");
+        spawnPointD = GameObject.Find("Abyling Spawn Point D");
+
+        if (!spawnList.Contains(spawnPointA))
             spawnList.Add(spawnPointA);
         if (!spawnList.Contains(spawnPointB))
             spawnList.Add(spawnPointB);
+        if (!spawnList.Contains(spawnPointC))
+            spawnList.Add(spawnPointC);
+        if (!spawnList.Contains(spawnPointD))
+            spawnList.Add(spawnPointD);
 
         ChooseSpawnPoint();
     }
@@ -32,9 +45,8 @@ public class AbylingControl : MonoBehaviour
     {
         RotateAbyling();
 
-        float moveSpeed = speed * Time.deltaTime;
-        if(Vector2.Distance(transform.position, diveBell.position) > 3f)
-            transform.position = Vector2.MoveTowards(transform.position, diveBell.position, moveSpeed);
+        if(Vector2.Distance(transform.position, diveBell.transform.position) > 3f)
+            transform.position = Vector2.MoveTowards(transform.position, diveBell.transform.position, moveSpeed * Time.deltaTime);
     }
 
     private void ChooseSpawnPoint()
@@ -46,7 +58,7 @@ public class AbylingControl : MonoBehaviour
 
     private void RotateAbyling()
     {
-        Vector3 direction = diveBell.position - transform.position;
+        Vector3 direction = diveBell.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Deg2Rad;
         if (transform.position.x < 0)
             rotationOffset = -90f;
