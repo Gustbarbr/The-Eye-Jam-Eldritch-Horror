@@ -1,10 +1,12 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class AbylingControl : MonoBehaviour
 {
+    [SerializeField] private PlayerMovement player;
+    [SerializeField] private float sanityDrainStartTime;
+    [SerializeField] private float sanityDrainEndTime;
+
     [Header("Position")]
     [SerializeField] private float moveSpeed;
 
@@ -23,6 +25,7 @@ public class AbylingControl : MonoBehaviour
 
     private void Start()
     {
+        player = FindAnyObjectByType<PlayerMovement>();
         diveBell = GameObject.Find("Dive Bell");
         spawnPointA = GameObject.Find("Abyling Spawn Point A");
         spawnPointB = GameObject.Find("Abyling Spawn Point B");
@@ -47,6 +50,17 @@ public class AbylingControl : MonoBehaviour
 
         if(Vector2.Distance(transform.position, diveBell.transform.position) > 3f)
             transform.position = Vector2.MoveTowards(transform.position, diveBell.transform.position, moveSpeed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, diveBell.transform.position) <= 3f)
+        {
+            if (sanityDrainStartTime < sanityDrainEndTime)
+                sanityDrainStartTime += Time.deltaTime;
+            if (sanityDrainStartTime >= sanityDrainEndTime)
+            {
+                player.sanity -= 5;
+                sanityDrainStartTime = 0;
+            }
+        }
     }
 
     private void ChooseSpawnPoint()
