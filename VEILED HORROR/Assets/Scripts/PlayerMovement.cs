@@ -14,9 +14,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(horizonatlMovement * moveSpeed, rb.linearVelocity.y);
         if (horizonatlMovement > 0)
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(3, 3);
         else if (horizonatlMovement < 0)
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-3, 3);
+
+        if (transform.position.x < -1.45f)
+            transform.position = new Vector2(-1.45f, -0.5f);
+        if (transform.position.x > 1.45f)
+            transform.position = new Vector2(1.45f, -0.5f);
     }
 
     public void Move(InputAction.CallbackContext context)
