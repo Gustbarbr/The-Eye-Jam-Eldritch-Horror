@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbylingControl
   player: {fileID: 0}
   sanityDrainStartTime: 0
-  sanityDrainEndTime: 1
+  sanityDrainEndTime: 0.7
   moveSpeed: 2
   diveBell: {fileID: 0}
   rotationSpeed: 100

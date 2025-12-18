@@ -1,9 +1,17 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Meters")]
+    public int meters;
+    public TextMeshProUGUI metersText;
+    [SerializeField] private float startMetersCooldownTime;
+    [SerializeField] private float endMetersCooldownTime;
+
     [Header("Sanity")]
     public int sanity;
     public TextMeshProUGUI sanityText;
@@ -28,7 +36,20 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.x > 1.45f)
             transform.position = new Vector2(1.45f, -0.5f);
 
+        if (startMetersCooldownTime < endMetersCooldownTime)
+            startMetersCooldownTime += Time.deltaTime;
+        else if(startMetersCooldownTime >= endMetersCooldownTime)
+        {
+            startMetersCooldownTime = 0;
+            meters += 1;
+        }
+
         sanityText.text = "SANITY: " + sanity.ToString() + "%";
+
+        metersText.text = "METERS: " + meters.ToString() + "m";
+
+        if (sanity <= 0)
+            SceneManager.LoadScene("Menu");
     }
 
     public void Move(InputAction.CallbackContext context)
