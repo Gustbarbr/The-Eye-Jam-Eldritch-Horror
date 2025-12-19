@@ -36,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     float horizonatlMovement;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         rb.linearVelocity = new Vector2(horizonatlMovement * moveSpeed, rb.linearVelocity.y);
